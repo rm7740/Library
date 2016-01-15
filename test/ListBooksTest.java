@@ -9,7 +9,7 @@ public class ListBooksTest {
         String actualName = shelf.showBookShelf();
         assertEquals(expectedName, actualName);
     }
-*/
+
     @Test
     public void shouldReturnNameDuneAndHyperion(){
         String expectedName = "Dune\n" + "Hyperion\n";
@@ -17,4 +17,5 @@ public class ListBooksTest {
         String actualName = shelf.showBookShelf();
         assertEquals(expectedName, actualName);
     }
+    */
 }
