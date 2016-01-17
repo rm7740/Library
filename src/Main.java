@@ -10,12 +10,17 @@ public class Main {
         Message message = new Message();
         Shelf shelf = new Shelf();
         message.displayWelcomeMessage();
-        message.displayMainMenu();
         Scanner userInput = new Scanner(System.in);
-        int optionChosen = userInput.nextInt();
-        switch (optionChosen){
-            case 1: shelf.showBookShelf();
+        boolean running = true;
+        while(running){
+            message.displayMainMenu();
+            int optionChosen = userInput.nextInt();
+            switch (optionChosen) {
+                case 1: shelf.showBookShelf();
                     break;
+                default: message.displayErrorMessage();
+                    break;
+            }
         }
     }
 }
