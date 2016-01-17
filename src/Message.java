@@ -7,6 +7,7 @@ public class Message {
     String mainMenuOption3 = "3. Quit";
     String invalidMenuOption = "Select a valid option!";
     String checkoutMenuSelectBook = "Please enter a book name";
+    String successfulCheckout = "Thank you! Enjoy the book";
 
     public void displayWelcomeMessage(){
         System.out.println(welcome);
@@ -26,5 +27,9 @@ public class Message {
 
     public void displayCheckoutMenu(){
         System.out.println(checkoutMenuSelectBook);
+    }
+
+    public void displaySuccessfulCheckoutMessage(){
+        System.out.println(successfulCheckout);
     }
 }

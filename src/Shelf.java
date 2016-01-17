@@ -40,6 +40,7 @@ public class Shelf {
                 String theNameToCheck = thisBookCheckout.getName();
                 if(theNameToCheck.equals(userGivenName)){
                     thisBookCheckout.setAvailable(false);
+                    message.displaySuccessfulCheckoutMessage();
                     invalidOption = false;
                 }
             }
