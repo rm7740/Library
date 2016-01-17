@@ -21,7 +21,9 @@ public class Main {
                     break;
                 case 2: shelf.checkoutBook();
                     break;
-                case 3: running = false;
+                case 3: shelf.returnBook();
+                    break;
+                case 4: running = false;
                     break;
                 default: message.displayErrorMessage();
                     break;

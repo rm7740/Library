@@ -52,4 +52,20 @@ public class Shelf {
             }
         }
     }
+
+    public void returnBook(){
+        boolean invalidOption = true;
+        while(invalidOption){
+            message.displayReturnMenu();
+            Scanner userReturnInput = new Scanner(System.in);
+            String userGivenName = userReturnInput.next();
+            for(Book thisBookReturn : bookShelf){
+                String theNameToCheck = thisBookReturn.getName();
+                if(theNameToCheck.equals(userGivenName)){
+                    thisBookReturn.setAvailable(true);
+                    invalidOption = false;
+                }
+            }
+        }
+    }
 }
