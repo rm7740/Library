@@ -1,7 +1,7 @@
 
 public class Message {
     String welcome = "Welcome to the library application";
-    String mainMenuTitle = "Please select an option";
+    String mainMenuTitle = "Please select an option from the menu (type in a number)";
     String mainMenuOption1 = "1. List books";
     String mainMenuOption2 = "2. Checkout book";
     String mainMenuOption3 = "3. Return book";
@@ -11,6 +11,7 @@ public class Message {
     String successfulCheckout = "Thank you! Enjoy the book";
     String unsuccessfulCheckout = "That book is not available";
     String successfulReturn = "Thank you for returning the book";
+    String unsuccessfulReturn = "That is not a valid book to return";
 
     public void displayWelcomeMessage(){
         System.out.println(welcome);
@@ -47,5 +48,9 @@ public class Message {
 
     public void displaySuccessfulReturnMessage(){
         System.out.println(successfulReturn);
+    }
+
+    public void displayUnsuccessfulReturnMessage(){
+        System.out.println(unsuccessfulReturn);
     }
 }

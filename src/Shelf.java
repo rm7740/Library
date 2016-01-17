@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class Shelf {
     ArrayList<Book> bookShelf = new ArrayList<>();
-    Book book1 = new Book();
-    Book book2 = new Book();
     Message message = new Message();
 
     public void createStock(){
+        Book book1 = new Book();
+        Book book2 = new Book();
         book1.setName("Dune");
         book1.setAuthor("Some Dude");
         book1.setYear("199x");
@@ -18,16 +18,13 @@ public class Shelf {
         bookShelf.add(book2);
     }
 
-    public String showBookShelf() {
-        String output = ("Title\tAuthor\tYear\n");
+    public void showBookShelf() {
         System.out.println("Title\tAuthor\tYear");
         for(Book thisBook : bookShelf) {
             if (thisBook.getAvailable()) {
                 System.out.println(thisBook.getName() + "\t" + thisBook.getAuthor() + "\t" + thisBook.getYear());
-                output += thisBook.getName() + "\t" + thisBook.getAuthor() + "\t" + thisBook.getYear() + "\n";
             }
         }
-        return output;
     }
 
     public void checkoutBook(){
@@ -65,6 +62,10 @@ public class Shelf {
                     if(!thisBookReturn.getAvailable()){
                         thisBookReturn.setAvailable(true);
                         message.displaySuccessfulReturnMessage();
+                        invalidOption = false;
+                    }
+                    else{
+                        message.displayUnsuccessfulReturnMessage();
                         invalidOption = false;
                     }
                 }
