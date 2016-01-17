@@ -9,6 +9,7 @@ public class Main {
     public void startSession() {
         Message message = new Message();
         Shelf shelf = new Shelf();
+        shelf.createStock();
         message.displayWelcomeMessage();
         Scanner userInput = new Scanner(System.in);
         boolean running = true;
@@ -18,7 +19,9 @@ public class Main {
             switch (optionChosen) {
                 case 1: shelf.showBookShelf();
                     break;
-                case 2: running = false;
+                case 2: shelf.checkoutBook();
+                    break;
+                case 3: running = false;
                     break;
                 default: message.displayErrorMessage();
                     break;
