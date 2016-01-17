@@ -62,8 +62,11 @@ public class Shelf {
             for(Book thisBookReturn : bookShelf){
                 String theNameToCheck = thisBookReturn.getName();
                 if(theNameToCheck.equals(userGivenName)){
-                    thisBookReturn.setAvailable(true);
-                    invalidOption = false;
+                    if(!thisBookReturn.getAvailable()){
+                        thisBookReturn.setAvailable(true);
+                        message.displaySuccessfulReturnMessage();
+                        invalidOption = false;
+                    }
                 }
             }
         }

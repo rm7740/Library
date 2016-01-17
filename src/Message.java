@@ -10,6 +10,7 @@ public class Message {
     String menuSelectBook = "Please enter a book name";
     String successfulCheckout = "Thank you! Enjoy the book";
     String unsuccessfulCheckout = "That book is not available";
+    String successfulReturn = "Thank you for returning the book";
 
     public void displayWelcomeMessage(){
         System.out.println(welcome);
@@ -42,5 +43,9 @@ public class Message {
 
     public void displayReturnMenu(){
         System.out.println(menuSelectBook);
+    }
+
+    public void displaySuccessfulReturnMessage(){
+        System.out.println(successfulReturn);
     }
 }
