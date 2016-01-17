@@ -3,6 +3,7 @@ public class Message {
     String welcome = "Welcome to the library application";
     String mainMenuTitle = "Please select an option";
     String mainMenuOption1 = "1. List books";
+    String mainMenuOption2 = "2. Quit";
     String invalidMenuOption = "Select a valid option!";
 
     public void displayWelcomeMessage(){
@@ -13,6 +14,7 @@ public class Message {
         System.out.println("\n");
         System.out.println(mainMenuTitle);
         System.out.println(mainMenuOption1);
+        System.out.println(mainMenuOption2);
     }
 
     public void displayErrorMessage(){

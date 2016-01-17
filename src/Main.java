@@ -18,6 +18,8 @@ public class Main {
             switch (optionChosen) {
                 case 1: shelf.showBookShelf();
                     break;
+                case 2: running = false;
+                    break;
                 default: message.displayErrorMessage();
                     break;
             }
