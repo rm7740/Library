@@ -39,9 +39,15 @@ public class Shelf {
             for(Book thisBookCheckout : bookShelf){
                 String theNameToCheck = thisBookCheckout.getName();
                 if(theNameToCheck.equals(userGivenName)){
-                    thisBookCheckout.setAvailable(false);
-                    message.displaySuccessfulCheckoutMessage();
-                    invalidOption = false;
+                    if(thisBookCheckout.getAvailable()){
+                        thisBookCheckout.setAvailable(false);
+                        message.displaySuccessfulCheckoutMessage();
+                        invalidOption = false;
+                    }
+                    else{
+                        message.displayUnsuccessfulCheckoutMessage();
+                        invalidOption = false;
+                    }
                 }
             }
         }

@@ -8,6 +8,7 @@ public class Message {
     String invalidMenuOption = "Select a valid option!";
     String checkoutMenuSelectBook = "Please enter a book name";
     String successfulCheckout = "Thank you! Enjoy the book";
+    String unsuccessfulCheckout = "That book is not available";
 
     public void displayWelcomeMessage(){
         System.out.println(welcome);
@@ -31,5 +32,9 @@ public class Message {
 
     public void displaySuccessfulCheckoutMessage(){
         System.out.println(successfulCheckout);
+    }
+
+    public void displayUnsuccessfulCheckoutMessage(){
+        System.out.println(unsuccessfulCheckout);
     }
 }
